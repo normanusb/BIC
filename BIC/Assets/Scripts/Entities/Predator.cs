@@ -22,7 +22,7 @@ public class Predator : Entity
         // Check if the entered GameObject is not the detector itself
         if (other.gameObject != gameObject && chaseTarget == null)
         {
-            if(other.CompareTag("Prey")|| other.CompareTag("Player"))
+            if(other.CompareTag("Prey")|| other.CompareTag("Player") || other.CompareTag("InfectedChick"))
             {
                 // The entered GameObject is within the range
                 Debug.Log(other.gameObject.name + " entered the range!");

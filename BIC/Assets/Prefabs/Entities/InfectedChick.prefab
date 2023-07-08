@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7834389247676243164}
-  m_Layer: 7
-  m_Name: foxAudio
+  m_Layer: 12
+  m_Name: infectedChickAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,11 +41,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3093209259667475618}
   - component: {fileID: 143297546018588102}
-  - component: {fileID: 7009576120909457045}
   - component: {fileID: 7734180563957336450}
-  m_Layer: 7
-  m_Name: Fox
-  m_TagString: Predator
+  - component: {fileID: 9184339352665854887}
+  m_Layer: 12
+  m_Name: InfectedChick
+  m_TagString: InfectedChick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3435562297821344658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.39, z: 0}
+  m_LocalPosition: {x: 0, y: 1.26, z: 0.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -94,40 +94,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 88
   m_CollisionDetection: 1
---- !u!114 &7009576120909457045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3435562297821344658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bec990130deea084a9422d445a05392c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prey: 0
-  predator: 1
-  maxHealth: 1
-  speed: 2
-  chaseSpeed: 8
-  attackDamage: 1
-  rotationSpeed: 40
-  targetReachedDistance: 2.5
-  chaseRange: 10
-  attackCooldown: 1
-  health: 0
-  targetDirection: {x: 0, y: 0, z: 0}
-  speedBox: 0
-  chaseSpeedBox: 0
-  chaseTarget: {fileID: 0}
-  distanceToTarget: 0
-  moving: 1
-  attackIsCool: 1
-  dead: 0
-  isWandering: 0
-  isChasing: 0
-  isAttacking: 0
 --- !u!135 &7734180563957336450
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -147,8 +113,42 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 8
+  m_Radius: 8.99
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9184339352665854887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435562297821344658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6c57f5972ba4c459ee158792bbeda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prey: 0
+  predator: 1
+  maxHealth: 1
+  speed: 4
+  chaseSpeed: 9
+  attackDamage: 1
+  rotationSpeed: 60
+  targetReachedDistance: 2.5
+  chaseRange: 10
+  attackCooldown: 1
+  health: 0
+  targetDirection: {x: 0, y: 0, z: 0}
+  speedBox: 0
+  chaseSpeedBox: 0
+  chaseTarget: {fileID: 0}
+  distanceToTarget: 0
+  moving: 1
+  attackIsCool: 1
+  dead: 0
+  isWandering: 0
+  isChasing: 0
+  isAttacking: 0
 --- !u!1 &8688234495449503634
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,8 +161,8 @@ GameObject:
   - component: {fileID: 2612531784409623629}
   - component: {fileID: 4696764802955410517}
   - component: {fileID: 126441227302413457}
-  m_Layer: 7
-  m_Name: foxVisuals
+  m_Layer: 12
+  m_Name: infectedChickVisuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,8 +176,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8688234495449503634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -1.32, z: -0.28}
+  m_LocalScale: {x: 0.15768567, y: 0.15768567, z: 0.15768567}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3093209259667475618}
@@ -190,7 +190,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8688234495449503634}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300008, guid: 693459689483f9e4aa5a1a6e8b37269e, type: 3}
 --- !u!23 &4696764802955410517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -252,5 +252,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6.854965, y: 15.329487, z: 11.693783}
+  m_Center: {x: -0.0069196057, y: 7.6825714, z: -1.304266}

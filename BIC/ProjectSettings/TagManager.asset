@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Prey
-  - Button
+  - InfectedChick
+  - Predator
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - BabyFox
   - Egg
   - Terrain
-  - 
+  - InfectedChick
   - 
   - 
   - 
@@ -42,10 +43,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 2881341775
-    locked: 0
-  - name: UI
-    uniqueID: 480725919
     locked: 0
