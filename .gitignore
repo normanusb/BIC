@@ -79,11 +79,7 @@ crashlytics-build.properties
 ![Aa]ssets/Editor Default Resources/FMOD/*
                     
 # Ignore the Cache folder since it is updated locally.
-[Aa]ssets/Plugins/FMOD/Cache/*
-                    
-# Ignore bank files in the StreamingAssets folder.
-[Aa]ssets/StreamingAssets/**/*.bank
-[Aa]ssets/StreamingAssets/**/*.bank.meta
+[Aa]ssets/Plugins/FMOD/Cache/*                
 
 ### FMOD Unity Integration ###
 # Never ignore DLLs in the FMOD subfolder, so make sure that the FMOD-folder is in the correct path.
