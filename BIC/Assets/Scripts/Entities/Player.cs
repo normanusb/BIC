@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public float speed;
     private Vector2 move;
-    public static int health = 2;
+    public int health;
     public static bool dead;
     
     public GameObject playerVisuals;
