@@ -14,6 +14,7 @@ public class Entity : MonoBehaviour
     public int attackDamage;
     public int rotationSpeed;
     public float targetReachedDistance;
+    public float chaseRange;
 
     [Header("*Variables*")]
     public int health;
@@ -52,6 +53,10 @@ public class Entity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (chaseTarget != null)
+        {
+            CalculateDistanceToTarget(chaseTarget);
+        }
         WanderAround();
         if (chaseTarget == null)
         {
@@ -61,7 +66,7 @@ public class Entity : MonoBehaviour
         else
         {
             Chase(chaseTarget);
-            CalculateDistanceToTarget(chaseTarget);
+            
         }
 
     }
@@ -140,7 +145,12 @@ public class Entity : MonoBehaviour
 
     public void CalculateDistanceToTarget(Transform target)
     {
+
         distanceToTarget = Vector3.Distance(transform.position, target.position);
+        if(distanceToTarget > chaseRange)
+        {
+            chaseTarget = null;
+        }
     }
 
     public void ActionIfTargetIsReached()
@@ -165,9 +175,13 @@ public class Entity : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, targetReachedDistance);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
+
 
 
 }

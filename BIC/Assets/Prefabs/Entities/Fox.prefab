@@ -65,7 +65,7 @@ Transform:
   - {fileID: 7136399909456205442}
   - {fileID: 7834389247676243164}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &143297546018588102
 Rigidbody:
@@ -114,9 +114,14 @@ MonoBehaviour:
   attackDamage: 1
   rotationSpeed: 40
   targetReachedDistance: 2.5
+  chaseRange: 10
   health: 0
+  targetDirection: {x: 0, y: 0, z: 0}
+  speedBox: 0
+  chaseSpeedBox: 0
   chaseTarget: {fileID: 0}
   distanceToTarget: 0
+  moving: 1
   isWandering: 0
   isChasing: 0
   isAttacking: 0
