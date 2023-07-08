@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prey: 0
   predator: 1
-  maxHealth: 1
+  maxHealth: 3
   speed: 4
   chaseSpeed: 9
   attackDamage: 1
