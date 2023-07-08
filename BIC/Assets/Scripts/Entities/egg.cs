@@ -9,6 +9,7 @@ public class PlayerCollectEggs : MonoBehaviour
 
     //VFX
     [SerializeField] private EventReference eggCollectedSound;
+    [SerializeField] private GameObject eggCollectingobject;
 
   private void OnTriggerEnter(Collider other) 
   {
@@ -17,8 +18,8 @@ public class PlayerCollectEggs : MonoBehaviour
     if (player != null) 
     {
         //SFX
-        AudioManager.instance.PlayOneShot(eggCollectedSound);
-        Instantiate(chickprefab, transform.position, transform.rotation);
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PLAYER/Player_CollectChick", eggCollectingobject);
+            Instantiate(chickprefab, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
   }
