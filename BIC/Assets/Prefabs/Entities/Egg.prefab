@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2805087171117468750}
   - component: {fileID: 7015821818465672947}
   - component: {fileID: 7115111975812602209}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Egg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8093905924172380990
 MeshFilter:
@@ -118,3 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be2b14e0532e554d940ecd9c4d68506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chickprefab: {fileID: 3435562297821344658, guid: b977b83e07032d3448aa849fb0823e46, type: 3}

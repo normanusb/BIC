@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7834389247676243164}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: foxAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 3093209259667475618}
   - component: {fileID: 143297546018588102}
   - component: {fileID: 7009576120909457045}
-  m_Layer: 7
-  m_Name: Fox
+  m_Layer: 8
+  m_Name: Chick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,21 +105,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec990130deea084a9422d445a05392c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prey: 0
-  predator: 1
+  prey: 1
+  predator: 0
   maxHealth: 1
   speed: 2
-  chaseSpeed: 7
-  attackDamage: 1
+  chaseSpeed: 6
+  attackDamage: 0
   rotationSpeed: 40
-  targetReachedDistance: 2.5
+  targetReachedDistance: 1
   health: 0
   distanceToTarget: 0
   isWandering: 0
   isChasing: 0
   isFleeing: 0
   isAttacking: 0
-  perceptionRange: 8.29
 --- !u!1 &8688234495449503634
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +131,7 @@ GameObject:
   - component: {fileID: 2612531784409623629}
   - component: {fileID: 4696764802955410517}
   - component: {fileID: 126441227302413457}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: foxVisuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 8688234495449503634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.59341, y: 0.59341, z: 0.59341}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3093209259667475618}
@@ -182,7 +181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51f2062e8e2a720439c8c2a5f38ff02e, type: 2}
+  - {fileID: 2100000, guid: 406c0ff64eb23f949b30ea56fd410abe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
