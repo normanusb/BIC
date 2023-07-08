@@ -9,7 +9,7 @@ public class InfectedChick : Predator
         // Check if the entered GameObject is not the detector itself
         if (other.gameObject != gameObject && chaseTarget == null)
         {
-            if (other.CompareTag("Predator") || other.CompareTag("Player"))
+            if (other.CompareTag("Predator") || other.CompareTag("Player") || other.CompareTag("Prey"))
             {
                 // The entered GameObject is within the range
                 Debug.Log(other.gameObject.name + " entered the range of Infected Chick!");
