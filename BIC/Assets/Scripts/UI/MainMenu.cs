@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         //Opens the first scene of the game
-        SceneManager.LoadScene("Audio");
+        SceneManager.LoadScene("AudioTest");
     }
 
     public void QuitGame()
