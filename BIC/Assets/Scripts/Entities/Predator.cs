@@ -35,17 +35,21 @@ public class Predator : Entity
 
     private void OnTriggerExit(Collider other)
     {
-        // Check if the exited GameObject is not the detector itself
-        if (other.gameObject == chaseTarget.gameObject)
+        if (chaseTarget != null)
         {
-            // The exited GameObject has left the range
-            Debug.Log(other.gameObject.name + " exited the range!");
+            // Check if the exited GameObject is not the detector itself
+            if (other.gameObject == chaseTarget.gameObject)
+            {
+                // The exited GameObject has left the range
+                Debug.Log(other.gameObject.name + " exited the range!");
 
-            chaseTarget = null;
-            StopChasing();
-        } else
-        {
-            return;
+                chaseTarget = null;
+                StopChasing();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
