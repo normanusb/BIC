@@ -7,9 +7,13 @@ public class Player : MonoBehaviour
     public float speed;
     private Vector2 move;
 
+    [SerializeField]
+    private PlayerAudio playerAudio;
+
     public void OnMove(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
+        //PLAY STEPS SOUNDS WITH FMOD
     }
     // Start is called before the first frame update
     void Start()
