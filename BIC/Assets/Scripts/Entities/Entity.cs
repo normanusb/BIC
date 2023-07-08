@@ -129,7 +129,7 @@ public class Entity : MonoBehaviour
 
     public void ActionIfTargetIsReached()
     {
-        //Attack if Fox or InfectedChick
+        //Attack if Predator or InfectedChick
         if (predator)
         {
             Attack();

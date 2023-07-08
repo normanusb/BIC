@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8023929328880140096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: playerAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6531249650563094947}
   - component: {fileID: 3739899610734952171}
   - component: {fileID: 7610678783722787895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ Transform:
   - {fileID: 5168150942984656666}
   - {fileID: 8023929328880140096}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8590456864303973563
 MonoBehaviour:
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5168150942984656666}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: playerVisuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 8252841088172069195}
   - component: {fileID: 4053259226501873545}
   - component: {fileID: 6279348266738704028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 6156213013663567970}
   - component: {fileID: 946455654986528501}
   - component: {fileID: 8681102507325798673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
