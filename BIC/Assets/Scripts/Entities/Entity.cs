@@ -17,17 +17,16 @@ public class Entity : MonoBehaviour
 
     [Header("*Variables*")]
     public int health;
-    private Vector3 targetDirection;
-    private float speedBox;
-    private float chaseSpeedBox;
-    private Transform chaseTarget;
+    public Vector3 targetDirection;
+    public float speedBox;
+    public float chaseSpeedBox;
+    public Transform chaseTarget;
     public float distanceToTarget;
-    private bool moving = true;
+    public bool moving = true;
 
     [Header("*States*")]
     public bool isWandering;
     public bool isChasing;
-    public bool isFleeing;
     public bool isAttacking;
 
 
@@ -46,8 +45,15 @@ public class Entity : MonoBehaviour
     void Update()
     {
         WanderAround();
-        Chase(chaseTarget);
-        CalculateDistanceToTarget(chaseTarget);
+        if(chaseTarget == null)
+        {
+            isChasing = false;
+            isWandering = true;
+        } else
+        {
+            Chase(chaseTarget);
+            CalculateDistanceToTarget(chaseTarget);
+        }
 
     }
 
@@ -75,13 +81,13 @@ public class Entity : MonoBehaviour
         }
     }
 
-    private void ChangeDirection()
+    public void ChangeDirection()
     {
         // Generate a new random direction
         float angle = Random.Range(0, 360);
         targetDirection = Quaternion.Euler(0, angle, 0) * Vector3.forward;
     }
-    private IEnumerator Stop()
+    public IEnumerator Stop()
     {
         if (moving)
         {
@@ -93,14 +99,14 @@ public class Entity : MonoBehaviour
         }
     }
 
-    private void StartWalking()
+    public void StartWalking()
     {
         speed = speedBox;
         chaseSpeed = chaseSpeedBox;
         moving = true;
     }
 
-    private void Chase(Transform target)
+    public void Chase(Transform target)
     {
         if (isChasing)
         {

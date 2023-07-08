@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3093209259667475618}
   - component: {fileID: 143297546018588102}
   - component: {fileID: 7009576120909457045}
+  - component: {fileID: 7734180563957336450}
   m_Layer: 7
   m_Name: Fox
   m_TagString: Untagged
@@ -109,17 +110,37 @@ MonoBehaviour:
   predator: 1
   maxHealth: 1
   speed: 2
-  chaseSpeed: 7
+  chaseSpeed: 4
   attackDamage: 1
   rotationSpeed: 40
   targetReachedDistance: 2.5
   health: 0
+  chaseTarget: {fileID: 0}
   distanceToTarget: 0
   isWandering: 0
   isChasing: 0
-  isFleeing: 0
   isAttacking: 0
-  perceptionRange: 8.29
+--- !u!135 &7734180563957336450
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435562297821344658}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8688234495449503634
 GameObject:
   m_ObjectHideFlags: 0
