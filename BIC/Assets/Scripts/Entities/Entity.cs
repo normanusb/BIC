@@ -15,6 +15,7 @@ public class Entity : MonoBehaviour
     public int rotationSpeed;
     public float targetReachedDistance;
     public float chaseRange;
+    public float attackCooldown;
 
     [Header("*Variables*")]
     public int health;
@@ -24,6 +25,8 @@ public class Entity : MonoBehaviour
     public Transform chaseTarget;
     public float distanceToTarget;
     public bool moving = true;
+    public bool attackIsCool = true;
+    public bool dead;
 
     [Header("*States*")]
     public bool isWandering;
@@ -53,6 +56,11 @@ public class Entity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dead == true)
+        {
+            StartCoroutine(Death());
+        }
+
         if (chaseTarget != null)
         {
             CalculateDistanceToTarget(chaseTarget);
@@ -66,7 +74,7 @@ public class Entity : MonoBehaviour
         else
         {
             Chase(chaseTarget);
-            
+
         }
 
     }
@@ -147,7 +155,7 @@ public class Entity : MonoBehaviour
     {
 
         distanceToTarget = Vector3.Distance(transform.position, target.position);
-        if(distanceToTarget > chaseRange)
+        if (distanceToTarget > chaseRange)
         {
             chaseTarget = null;
         }
@@ -158,7 +166,7 @@ public class Entity : MonoBehaviour
         //Attack if Predator or InfectedChick
         if (predator)
         {
-            Attack();
+            StartCoroutine(Attack());
         }
         //Stop if Chick
         else if (prey)
@@ -168,9 +176,51 @@ public class Entity : MonoBehaviour
 
     }
 
-    public void Attack()
+    public IEnumerator Attack()
     {
-        Debug.Log("Attack!");
+        if (attackIsCool)
+        {
+            attackIsCool = false;
+            Debug.Log("Attack!");
+            //Stop for a Second to play Animation?
+
+            Player player = chaseTarget.GetComponent<Player>();
+            Prey prey = chaseTarget.GetComponent<Prey>();
+            Predator predator = chaseTarget.GetComponent<Predator>();
+
+            //Inflict Damage to the target
+            if (player != null)
+            {
+                chaseTarget.GetComponent<Player>().TakeDamage(attackDamage);
+            }
+            else if (prey != null)
+            {
+                chaseTarget.GetComponent<Prey>().TakeDamage(attackDamage);
+            }
+            else if (predator != null)
+            {
+                chaseTarget.GetComponent<Predator>().TakeDamage(attackDamage);
+            }
+
+            //Cooldown
+            yield return new WaitForSeconds(attackCooldown);
+            attackIsCool = true;
+        }
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            dead = true;
+        }
+    }
+
+    public IEnumerator Death()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Destroy(this.gameObject);
     }
 
     private void OnDrawGizmosSelected()
