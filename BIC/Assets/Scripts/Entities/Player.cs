@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     public float speed;
     private Vector2 move;
     public static int health = 2;
-    public static bool isGameOver;
+    public static bool dead;
+    
+    public GameObject playerVisuals;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -18,7 +20,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isGameOver = false;
+        dead = false;
     }
 
     // Update is called once per frame
@@ -26,9 +28,9 @@ public class Player : MonoBehaviour
     {
         movePlayer();
 
-        if (isGameOver) 
+        if (dead) 
         {
-            playersDeath();
+            StartCoroutine(playersDeath());
         }
     }
 
@@ -48,14 +50,28 @@ public class Player : MonoBehaviour
         health -= damageAmount;
         if (health <=0) 
         {
-            isGameOver = true;
+            dead = true;
         }
     }
     public IEnumerator playersDeath() 
     {
+        //Deactivate Visuals
+        playerVisuals.SetActive(false);
+        //Deactivate Controlers
+        GetComponent<PlayerInput>().enabled = false;
+        //Deactivate triggers and colliders
+        GetComponent<BoxCollider>().enabled = false;
 
+        //Freeze Rigidbody
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+
+        //Deactivate Player Audio?????
+        //playerAudio.SetActive(false);
+
+        //Wait seconds
         yield return new WaitForSeconds(2);
 
+        //Reload Scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
