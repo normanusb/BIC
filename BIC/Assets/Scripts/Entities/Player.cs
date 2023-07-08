@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public float speed;
     private Vector2 move;
+    public int LifePoints;
 
     [SerializeField]
     private PlayerAudio playerAudio;
@@ -18,7 +20,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -37,4 +39,21 @@ public class Player : MonoBehaviour
         }
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
+
+    public void TakeDamage(int amount) 
+    {
+        LifePoints --;
+        if (LifePoints == 0) {
+            playersDeath();
+        }
+    }
+
+    IEnumerator playersDeath() 
+    {
+        //TODO Deactivate all visuals and controls
+        //gameObject.GetComponent<PlayerInput>.enabled = false;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }
