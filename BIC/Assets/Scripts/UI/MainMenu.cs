@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    
+    public EventReference mainThemeReference;
+    public GameObject mainThemeObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +20,9 @@ public class MainMenu : MonoBehaviour
     {
         //Opens the first scene of the game
         SceneManager.LoadScene("AudioTest");
+
+        //FMOD - Play one-shot
+        //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MUSIC/MUS_Farm_Test", mainThemeReference, mainThemeObject);
     }
 
     public void QuitGame()

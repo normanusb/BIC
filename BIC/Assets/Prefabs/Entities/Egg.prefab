@@ -119,3 +119,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chickprefab: {fileID: 3435562297821344658, guid: b977b83e07032d3448aa849fb0823e46, type: 3}
+  eggCollectedSound:
+    Guid:
+      Data1: 1773302576
+      Data2: 1296525552
+      Data3: -929325633
+      Data4: 1701495519
+    Path: event:/PLAYER/Player_CollectChick
+  eggCollectingobject: {fileID: 2759304186106839314}

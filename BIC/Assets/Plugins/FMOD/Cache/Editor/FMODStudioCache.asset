@@ -1,5 +1,106 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8992359773340149630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/BIC/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638244565062578196
+  FileSizes:
+  - Name: Desktop
+    Value: 87328
+  Exists: 1
+--- !u!114 &-5714329519656793839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/Player_ThrowChick_Infected
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/Player_ThrowChick_Infected
+  Guid:
+    Data1: -1234772401
+    Data2: 1100776947
+    Data3: -1096224120
+    Data4: 1644481535
+  Banks:
+  - {fileID: -8992359773340149630}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 567
+--- !u!114 &-4137997800349015648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/Player_CollectChick
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/Player_CollectChick
+  Guid:
+    Data1: 1773302576
+    Data2: 1296525552
+    Data3: -929325633
+    Data4: 1701495519
+  Banks:
+  - {fileID: -8992359773340149630}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 226
+--- !u!114 &-1168014054514165611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/Player_EatBabyFox
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/Player_EatBabyFox
+  Guid:
+    Data1: 1936015997
+    Data2: 1251041289
+    Data3: 935363236
+    Data4: 1066336318
+  Banks:
+  - {fileID: -8992359773340149630}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 680
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +113,191 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: 8424369813125898736}
+  - {fileID: 8463201309837679264}
+  - {fileID: 4624244206443727989}
+  - {fileID: -8992359773340149630}
+  EditorEvents:
+  - {fileID: 7384965342372901933}
+  - {fileID: -4137997800349015648}
+  - {fileID: -5714329519656793839}
+  - {fileID: 7117554547680681355}
+  - {fileID: -1168014054514165611}
+  - {fileID: 5190765348370348589}
+  - {fileID: 7564848769092781203}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: 8463201309837679264}
+  StringsBanks:
+  - {fileID: 8424369813125898736}
+  cacheTime: 638244565062578196
   cacheVersion: 131605
+--- !u!114 &4624244206443727989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MUSIC.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/BIC/Build/Desktop/MUSIC.bank
+  Name: MUSIC
+  StudioPath: bank:/MUSIC
+  lastModified: 638244565062339414
+  FileSizes:
+  - Name: Desktop
+    Value: 682976
+  Exists: 1
+--- !u!114 &5190765348370348589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/Player_Death
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/Player_Death
+  Guid:
+    Data1: -375401091
+    Data2: 1276521552
+    Data3: 1287670970
+    Data4: 1945467855
+  Banks:
+  - {fileID: -8992359773340149630}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1490
+--- !u!114 &7117554547680681355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/Player_ThrowChick
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/Player_ThrowChick
+  Guid:
+    Data1: -1786052229
+    Data2: 1103689460
+    Data3: -900305989
+    Data4: -687273835
+  Banks:
+  - {fileID: -8992359773340149630}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 271
+--- !u!114 &7384965342372901933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/MUS_Farm_Test
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/MUS_Farm_Test
+  Guid:
+    Data1: -1332658583
+    Data2: 1197679578
+    Data3: -679943536
+    Data4: -218755050
+  Banks:
+  - {fileID: 4624244206443727989}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 52656
+--- !u!114 &7564848769092781203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/Player_Respawn
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/Player_Respawn
+  Guid:
+    Data1: 1686564047
+    Data2: 1243807102
+    Data3: 1908383135
+    Data4: -1800508620
+  Banks:
+  - {fileID: -8992359773340149630}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 906
+--- !u!114 &8424369813125898736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/BIC/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638244565062091112
+  FileSizes:
+  - Name: Desktop
+    Value: 1150
+  Exists: 1
+--- !u!114 &8463201309837679264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/BIC/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638244565062076347
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
