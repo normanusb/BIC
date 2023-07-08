@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 1652984531}
 --- !u!1001 &797196155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -816,6 +816,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37754e6b4312d1d46995728bcc34cf34, type: 3}
+--- !u!1 &1652984531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4397449481407575747, guid: 0a84dfeb0b5978e4e81889aa83156c62, type: 3}
+  m_PrefabInstance: {fileID: 1626459266842255823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1826991991
 PrefabInstance:
   m_ObjectHideFlags: 0
