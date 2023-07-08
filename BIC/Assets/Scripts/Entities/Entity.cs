@@ -35,21 +35,30 @@ public class Entity : MonoBehaviour
     {
         speedBox = speed;
         chaseSpeedBox = chaseSpeed;
-        isWandering = false;
-        isChasing = true;
 
-        chaseTarget = GameObject.Find("Player").transform;
+        if (predator)
+        {
+            isWandering = true;
+        }
+        else if (prey)
+        {
+            chaseTarget = GameObject.Find("Player").transform;
+
+            isChasing = true;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
         WanderAround();
-        if(chaseTarget == null)
+        if (chaseTarget == null)
         {
             isChasing = false;
             isWandering = true;
-        } else
+        }
+        else
         {
             Chase(chaseTarget);
             CalculateDistanceToTarget(chaseTarget);
@@ -122,7 +131,8 @@ public class Entity : MonoBehaviour
             transform.Translate(Vector3.forward * chaseSpeed * Time.deltaTime);
 
             //Check if target is reached
-            if(distanceToTarget <= targetReachedDistance) {
+            if (distanceToTarget <= targetReachedDistance)
+            {
                 ActionIfTargetIsReached();
             }
         }
@@ -145,7 +155,7 @@ public class Entity : MonoBehaviour
         {
             StartCoroutine(Stop());
         }
-   
+
     }
 
     public void Attack()
