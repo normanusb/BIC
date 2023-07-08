@@ -64,7 +64,7 @@ Transform:
   - {fileID: 7136399909456205442}
   - {fileID: 7834389247676243164}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &143297546018588102
 Rigidbody:
@@ -91,8 +91,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 88
+  m_CollisionDetection: 1
 --- !u!114 &7009576120909457045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,11 +105,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec990130deea084a9422d445a05392c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prey: 0
+  predator: 1
   maxHealth: 1
-  speed: 10
+  speed: 2
+  chaseSpeed: 7
   attackDamage: 1
-  rotationSpeed: 10
+  rotationSpeed: 40
+  targetReachedDistance: 2.5
   health: 0
+  distanceToTarget: 0
   isWandering: 0
   isChasing: 0
   isFleeing: 0
