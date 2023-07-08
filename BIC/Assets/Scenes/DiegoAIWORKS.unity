@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3093209259667475618, guid: 0455383c06b021f44a65fbeaf55d42a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.2
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 3093209259667475618, guid: 0455383c06b021f44a65fbeaf55d42a2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -560,14 +560,6 @@ PrefabInstance:
     - target: {fileID: 3435562297821344658, guid: 0455383c06b021f44a65fbeaf55d42a2, type: 3}
       propertyPath: m_Name
       value: Fox
-      objectReference: {fileID: 0}
-    - target: {fileID: 7009576120909457045, guid: 0455383c06b021f44a65fbeaf55d42a2, type: 3}
-      propertyPath: prey
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7009576120909457045, guid: 0455383c06b021f44a65fbeaf55d42a2, type: 3}
-      propertyPath: predator
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -792,6 +784,10 @@ PrefabInstance:
     - target: {fileID: 4397449481407575747, guid: 0a84dfeb0b5978e4e81889aa83156c62, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312435392055154685, guid: 0a84dfeb0b5978e4e81889aa83156c62, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
