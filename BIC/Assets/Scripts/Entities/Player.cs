@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+using FMOD.Studio;
 public class Player : MonoBehaviour
 {
     public float speed;
@@ -27,24 +29,24 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject putPlayerHere;
 
+    // [SerializeField] private EventReference playerFootsteps;
+    // private FMOD.Studio.EventInstance playerFootstepsInstance;
+
     float timer = 0.0f;
 
     [SerializeField]
     float footstepSpeed = 0.3f;
 
+    void Awake()
+    {
+        //playerFootstepsInstance = FMODUnity.RuntimeManager.CreateInstance(playerFootsteps);
+    }
+    
     public void OnMove(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
         //PLAY STEPS SOUNDS WITH FMOD
-
-        if (timer > footstepSpeed)
-            {
-                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PLAYER/Player_Foosteps", putPlayerHere);
-                timer = 0.0f;
-            }
-
-        timer += Time.deltaTime;
-
+        
     }
 
     //Throwing Normal Chick
@@ -107,6 +109,14 @@ public class Player : MonoBehaviour
         if (movement != Vector3.zero)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15f);
+
+            if (timer > footstepSpeed)
+            {
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PLAYER/Player_Foosteps", putPlayerHere);
+                timer = 0.0f;
+            }
+
+            timer += Time.deltaTime;
         }
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
