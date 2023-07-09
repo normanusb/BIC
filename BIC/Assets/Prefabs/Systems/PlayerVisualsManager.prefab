@@ -366,9 +366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerModel: {fileID: 6738208859125700944}
   playerModelAnchor: {fileID: 6248552447045071240}
-  hopThreshold: 0.1
-  hopHeight: 0.2
-  airTimeLimit: 0.1
+  swayAngle: 7
+  swaySpeed: 2
 --- !u!1 &5060894634817645954
 GameObject:
   m_ObjectHideFlags: 0
