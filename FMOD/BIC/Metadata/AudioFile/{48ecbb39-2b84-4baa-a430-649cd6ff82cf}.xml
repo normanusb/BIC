@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{48ecbb39-2b84-4baa-a430-649cd6ff82cf}">
+		<property name="assetPath">
+			<value>SFX_AMB_Farm.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>60</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0fdf8ecc-02b8-4440-b41c-e74bc70a0e3a}</destination>
+		</relationship>
+	</object>
+</objects>
