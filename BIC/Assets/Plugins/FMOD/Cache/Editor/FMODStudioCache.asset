@@ -15,11 +15,37 @@ MonoBehaviour:
   Path: ../FMOD/BIC/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638244565062578196
-  FileSizes:
-  - Name: Desktop
-    Value: 87328
+  lastModified: 638244713273331841
+  FileSizes: []
   Exists: 1
+--- !u!114 &-6210296757678232532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PLAYER/Player_Foosteps
+  m_EditorClassIdentifier: 
+  Path: event:/PLAYER/Player_Foosteps
+  Guid:
+    Data1: 1977593623
+    Data2: 1310806434
+    Data3: 595298724
+    Data4: -1983061869
+  Banks:
+  - {fileID: -8992359773340149630}
+  - {fileID: 5955772581212426438}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7558
 --- !u!114 &-5714329519656793839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +66,7 @@ MonoBehaviour:
     Data4: 1644481535
   Banks:
   - {fileID: -8992359773340149630}
+  - {fileID: 5955772581212426438}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -67,6 +94,7 @@ MonoBehaviour:
     Data4: 1701495519
   Banks:
   - {fileID: -8992359773340149630}
+  - {fileID: 5955772581212426438}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -94,6 +122,7 @@ MonoBehaviour:
     Data4: 1066336318
   Banks:
   - {fileID: -8992359773340149630}
+  - {fileID: 5955772581212426438}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -101,6 +130,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 680
+--- !u!114 &-164987346247629688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/BIC/Build/Desktop/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638244728234480028
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +165,9 @@ MonoBehaviour:
   - {fileID: 8463201309837679264}
   - {fileID: 4624244206443727989}
   - {fileID: -8992359773340149630}
+  - {fileID: -164987346247629688}
+  - {fileID: 3382438053385862169}
+  - {fileID: 5955772581212426438}
   EditorEvents:
   - {fileID: 7384965342372901933}
   - {fileID: -4137997800349015648}
@@ -126,13 +176,33 @@ MonoBehaviour:
   - {fileID: -1168014054514165611}
   - {fileID: 5190765348370348589}
   - {fileID: 7564848769092781203}
+  - {fileID: -6210296757678232532}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8463201309837679264}
+  - {fileID: -164987346247629688}
   StringsBanks:
   - {fileID: 8424369813125898736}
-  cacheTime: 638244565062578196
+  cacheTime: 638244728234978708
   cacheVersion: 131605
+--- !u!114 &3382438053385862169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/MUSIC.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/BIC/Build/Desktop/Desktop/MUSIC.bank
+  Name: Desktop/MUSIC
+  StudioPath: bank:/MUSIC
+  lastModified: 638244728234760269
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4624244206443727989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,10 +218,8 @@ MonoBehaviour:
   Path: ../FMOD/BIC/Build/Desktop/MUSIC.bank
   Name: MUSIC
   StudioPath: bank:/MUSIC
-  lastModified: 638244565062339414
-  FileSizes:
-  - Name: Desktop
-    Value: 682976
+  lastModified: 638244713271614195
+  FileSizes: []
   Exists: 1
 --- !u!114 &5190765348370348589
 MonoBehaviour:
@@ -173,6 +241,7 @@ MonoBehaviour:
     Data4: 1945467855
   Banks:
   - {fileID: -8992359773340149630}
+  - {fileID: 5955772581212426438}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -180,6 +249,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1490
+--- !u!114 &5955772581212426438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/BIC/Build/Desktop/Desktop/SFX.bank
+  Name: Desktop/SFX
+  StudioPath: bank:/SFX
+  lastModified: 638244728234978708
+  FileSizes: []
+  Exists: 1
 --- !u!114 &7117554547680681355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +287,7 @@ MonoBehaviour:
     Data4: -687273835
   Banks:
   - {fileID: -8992359773340149630}
+  - {fileID: 5955772581212426438}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -227,6 +315,7 @@ MonoBehaviour:
     Data4: -218755050
   Banks:
   - {fileID: 4624244206443727989}
+  - {fileID: 3382438053385862169}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -254,6 +343,7 @@ MonoBehaviour:
     Data4: -1800508620
   Banks:
   - {fileID: -8992359773340149630}
+  - {fileID: 5955772581212426438}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -276,10 +366,10 @@ MonoBehaviour:
   Path: ../FMOD/BIC/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638244565062091112
+  lastModified: 638244713271093482
   FileSizes:
-  - Name: Desktop
-    Value: 1150
+  - Name: 
+    Value: 1188
   Exists: 1
 --- !u!114 &8463201309837679264
 MonoBehaviour:
@@ -296,8 +386,6 @@ MonoBehaviour:
   Path: ../FMOD/BIC/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638244565062076347
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
+  lastModified: 638244713271093482
+  FileSizes: []
   Exists: 1

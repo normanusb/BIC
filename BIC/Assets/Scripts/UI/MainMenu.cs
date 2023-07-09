@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("AudioTest");
 
         //FMOD - Play one-shot
-        //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MUSIC/MUS_Farm_Test", mainThemeReference, mainThemeObject);
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MUSIC/MUS_Farm_Test", mainThemeObject);
     }
 
     public void QuitGame()
