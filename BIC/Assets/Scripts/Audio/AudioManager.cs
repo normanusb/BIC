@@ -5,20 +5,19 @@ using FMODUnity;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance { get; private set; }
+    //VFX
+    [SerializeField] private EventReference mainMusicLoop;
+    [SerializeField] private GameObject AudioManagerObject;
 
-    private void Awake()
+    private void Start()
     {
-        if(instance != null)
-        {
-            Debug.Log("Found more than one Audio Manager in the scene. Ask Miguel");
-        }
-        instance = this;
+        PlayMusic();
     }
+    public void PlayMusic()
+    {
+        //SFX
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MUSIC/Main_Music_Loop", AudioManagerObject);
+    }
+     
 
-    public void PlayOneShot(EventReference sound)
-    {
-        RuntimeManager.PlayOneShot(sound);
-    }
-        
 }
