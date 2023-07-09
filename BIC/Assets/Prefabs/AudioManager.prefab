@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4232043629480275667
 MonoBehaviour:
@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e37c7be2532b14dbf14ec72ed9e8f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioManagerObject: {fileID: 1402065562129722276}
   mainMusicLoop:
     Guid:
-      Data1: -1332658583
-      Data2: 1197679578
-      Data3: -679943536
-      Data4: -218755050
-    Path: event:/MUSIC/MUS_Farm_Test
-  AudioManagerObject: {fileID: 1402065562129722276}
+      Data1: -771921522
+      Data2: 1333892228
+      Data3: -1652644729
+      Data4: -741931926
+    Path: event:/MUSIC/Main_Music_Loop
