@@ -34,7 +34,7 @@ public class babyfox : MonoBehaviour
         //Deactivate Controlers
         other.GetComponent<PlayerInput>().enabled = false;
         yield return new WaitForSeconds(2);
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.active = false;
         yield return new WaitForSeconds(2);
         // TODO: Make this script go to NeW Scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
