@@ -478,7 +478,13 @@ MonoBehaviour:
   throwableChicksRadius: 7
   followingEntities: []
   putPlayerHere: {fileID: 4397449481407575747}
-  footstepSpeed: 0.3
+  playerFootsteps:
+    Guid:
+      Data1: 1977593623
+      Data2: 1310806434
+      Data3: 595298724
+      Data4: -1983061869
+    Path: event:/PLAYER/Player_Foosteps
 --- !u!114 &6531249650563094947
 MonoBehaviour:
   m_ObjectHideFlags: 0
