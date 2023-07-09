@@ -214,7 +214,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fb07341f82d55644b8f9726bf0bc9cad, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb07341f82d55644b8f9726bf0bc9cad, type: 3}
       propertyPath: m_LocalScale.x
@@ -1076,11 +1076,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -771921522
-      Data2: 1333892228
-      Data3: -1652644729
-      Data4: -741931926
-    Path: event:/MUSIC/Main_Music_Loop
+      Data1: 120947238
+      Data2: 1320672709
+      Data3: 1159663241
+      Data4: 883360284
+    Path: event:/MUSIC/MUS_Menu_Loop
   Event: 
   PlayEvent: 1
   StopEvent: 2
