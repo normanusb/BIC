@@ -136,13 +136,13 @@ public class Entity : MonoBehaviour
     {
         if (isChasing)
         {
-            // Calculate the direction towards the player
+            // Calculate the direction towards the target
             Vector3 directionToTarget = target.position - transform.position;
             directionToTarget.y = 0f;   // Ignore height difference
 
-            // Rotate towards the player
+            // Rotate towards the target
             Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * Random.Range(4, 7));
 
             // Move towards the player
             transform.Translate(Vector3.forward * chaseSpeed * Time.deltaTime);
