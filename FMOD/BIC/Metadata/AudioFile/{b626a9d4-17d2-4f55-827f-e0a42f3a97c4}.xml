@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{2ace0e28-4c4e-4b00-b793-e366583bbff4}">
+	<object class="AudioFile" id="{b626a9d4-17d2-4f55-827f-e0a42f3a97c4}">
 		<property name="assetPath">
-			<value>MUS_Farm_Layer_01 (DEMO).mp3</value>
+			<value>MUS_Menu_Loop.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>52.655999999999999</value>
+			<value>13.090916666666667</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{0fdf8ecc-02b8-4440-b41c-e74bc70a0e3a}</destination>

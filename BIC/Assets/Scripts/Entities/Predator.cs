@@ -46,10 +46,20 @@ public class Predator : Entity
 
             */
 
-            if (other.CompareTag("Prey") || other.CompareTag("Player") || other.CompareTag("InfectedChick"))
+            if (other.CompareTag("Prey"))
             {
                 // The entered GameObject is within the range
-                Debug.Log(other.gameObject.name + " entered the range!");
+                // Debug.Log(other.gameObject.name + " entered the range!");
+                chaseTarget = other.gameObject.transform;
+                StartChasing();
+            }
+            else if (other.CompareTag("Player"))
+            {
+                chaseTarget = other.gameObject.transform;
+                StartChasing();
+            }
+            else if (other.CompareTag("InfectedChick"))
+            {
                 chaseTarget = other.gameObject.transform;
                 StartChasing();
             }
@@ -64,7 +74,7 @@ public class Predator : Entity
             if (other.CompareTag("Prey") || other.CompareTag("Player") || other.CompareTag("InfectedChick"))
             {
                 // The entered GameObject is within the range
-                Debug.Log(other.gameObject.name + " entered the range!");
+                // Debug.Log(other.gameObject.name + " entered the range!");
                 chaseTarget = other.gameObject.transform;
                 StartChasing();
             }
