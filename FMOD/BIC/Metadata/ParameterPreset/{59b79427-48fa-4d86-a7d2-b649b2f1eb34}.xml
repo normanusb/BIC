@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{59b79427-48fa-4d86-a7d2-b649b2f1eb34}">
+		<property name="name">
+			<value>Farm_or_Forest_Ambience</value>
+		</property>
+		<relationship name="folder">
+			<destination>{798f2fcb-a2cd-4ae2-a1c3-e898f546881c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3969961d-1a6c-4209-907a-4ceda1ff8897}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3969961d-1a6c-4209-907a-4ceda1ff8897}">
+		<property name="maximum">
+			<value>10</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
