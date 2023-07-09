@@ -161,6 +161,7 @@ public class Player : MonoBehaviour
         }
         else if (projectileToThrow == projectileChickInfected)
         {
+            Destroy(closestEntity.gameObject);
             ProjectileLogic();
         }
 
@@ -187,9 +188,6 @@ public class Player : MonoBehaviour
     public void InfectChickInHand()
     {
         Debug.Log("Infected Chick ready to throw!");
-
-        //Delete One Chick
-        Destroy(closestEntity.gameObject);
 
         //Spawn Chick next to Player so it seems like its charging it up before throwing
 
