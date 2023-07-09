@@ -35,6 +35,8 @@ public class babyfox : MonoBehaviour
     {
         //Deactivate Controlers
         other.GetComponent<PlayerInput>().enabled = false;
+        //SFX
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PLAYER/Player_EatBabyFox", this.gameObject);
         yield return new WaitForSeconds(2);
         foxlingVisuals.SetActive(false);
         yield return new WaitForSeconds(2);
