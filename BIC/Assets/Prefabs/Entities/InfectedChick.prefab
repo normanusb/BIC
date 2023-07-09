@@ -222,9 +222,9 @@ MonoBehaviour:
   minChaseSpeed: 3
   attackDamage: 1
   rotationSpeed: 60
-  targetReachedDistance: 2.5
+  targetReachedDistance: 3
   chaseRange: 10
-  attackCooldown: 1
+  attackCooldown: 0.7
   health: 0
   targetDirection: {x: 0, y: 0, z: 0}
   speedBox: 0

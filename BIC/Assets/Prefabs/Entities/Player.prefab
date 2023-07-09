@@ -436,8 +436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   health: 1
-  shootForce: 14
-  upwardForce: 6
+  shootForce: 12
+  upwardForce: 5
   shootPosition: {fileID: 5408078030644050971}
   playerVisuals: {fileID: 6312435392055154685}
   projectileChick: {fileID: 289625065935770284, guid: a5f26c97cc764f648a4208ca93ea70ce, type: 3}
