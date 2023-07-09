@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5122c819665afd54bb171dad2b80d2e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 12
   health: 1
   shootForce: 13
   upwardForce: 5
@@ -173,7 +173,9 @@ MonoBehaviour:
   playerVisuals: {fileID: 6312435392055154685}
   projectileChick: {fileID: 289625065935770284, guid: a5f26c97cc764f648a4208ca93ea70ce, type: 3}
   projectileChickInfected: {fileID: 4776008604841068310, guid: a0b30cb1ff2da394d9a084f710068880, type: 3}
+  closestEntity: {fileID: 0}
   throwableChicksRadius: 5
+  followingEntities: []
 --- !u!114 &6531249650563094947
 MonoBehaviour:
   m_ObjectHideFlags: 0
