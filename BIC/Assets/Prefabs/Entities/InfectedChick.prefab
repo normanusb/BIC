@@ -92,7 +92,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8886282033038296999, guid: 31b847436b945574b91dc795869e57d9, type: 3}
+  - {fileID: 2100000, guid: 2d8ee427c32ae8f4ab60596801c7848d, type: 2}
   - {fileID: -1580535799172915004, guid: 31b847436b945574b91dc795869e57d9, type: 3}
   - {fileID: 4108027859780746330, guid: 31b847436b945574b91dc795869e57d9, type: 3}
   - {fileID: 7094526924950821706, guid: 31b847436b945574b91dc795869e57d9, type: 3}
@@ -300,6 +300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8602064973682859776}
+  - component: {fileID: 4210887337256935260}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -323,3 +324,17 @@ Transform:
   m_Father: {fileID: 7136399909456205442}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4210887337256935260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947381596101674426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1e29107f6174d4ca1bd382454b17ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swayAngle: 7
+  swaySpeed: 2
