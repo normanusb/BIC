@@ -57,6 +57,20 @@ public class Predator : Entity
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject != gameObject && chaseTarget == null)
+        {
+            if (other.CompareTag("Prey") || other.CompareTag("Player") || other.CompareTag("InfectedChick"))
+            {
+                // The entered GameObject is within the range
+                Debug.Log(other.gameObject.name + " entered the range!");
+                chaseTarget = other.gameObject.transform;
+                StartChasing();
+            }
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (chaseTarget != null)
