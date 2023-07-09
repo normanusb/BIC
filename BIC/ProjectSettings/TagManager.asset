@@ -42,12 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: UI
-    uniqueID: 3260082787
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Background
     uniqueID: 3760993579
+    locked: 0
+  - name: Slides
+    uniqueID: 2568179221
+    locked: 0
+  - name: UI
+    uniqueID: 3260082787
     locked: 0
