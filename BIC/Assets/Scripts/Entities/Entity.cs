@@ -186,7 +186,7 @@ public class Entity : MonoBehaviour
         if (attackIsCool)
         {
             attackIsCool = false;
-            Debug.Log("Attack!");
+           // Debug.Log("Attack!");
             //Stop for a Second to play Animation?
 
             Player player = chaseTarget.GetComponent<Player>();

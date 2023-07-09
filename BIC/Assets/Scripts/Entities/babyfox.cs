@@ -5,9 +5,11 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class babyfox : MonoBehaviour
 {
+    public GameObject foxlingVisuals;
     private void OnTriggerEnter(Collider other)
     {
         Player player = other.GetComponent<Player>();
+        
 
         if (player != null)
         {
@@ -34,9 +36,9 @@ public class babyfox : MonoBehaviour
         //Deactivate Controlers
         other.GetComponent<PlayerInput>().enabled = false;
         yield return new WaitForSeconds(2);
-        gameObject.active = false;
+        foxlingVisuals.SetActive(false);
         yield return new WaitForSeconds(2);
         // TODO: Make this script go to NeW Scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
