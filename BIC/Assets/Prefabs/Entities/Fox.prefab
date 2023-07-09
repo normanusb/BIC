@@ -58,8 +58,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3435562297821344658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.39, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.875}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7136399909456205442}
@@ -108,13 +108,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prey: 0
   predator: 1
-  maxHealth: 5
+  maxHealth: 3
   speed: 2
-  chaseSpeed: 8
+  chaseSpeed: 12
+  minChaseSpeed: 4
   attackDamage: 1
   rotationSpeed: 40
   targetReachedDistance: 2.5
-  chaseRange: 10
+  chaseRange: 8
   attackCooldown: 1
   health: 0
   targetDirection: {x: 0, y: 0, z: 0}
@@ -240,7 +241,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8688234495449503634}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4eec0dd63a4695446846df8505596345, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

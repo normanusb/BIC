@@ -11,6 +11,7 @@ public class Entity : MonoBehaviour
     public int maxHealth;
     public float speed;
     public float chaseSpeed;
+    public float minChaseSpeed;
     public int attackDamage;
     public int rotationSpeed;
     public float targetReachedDistance;
@@ -37,6 +38,7 @@ public class Entity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        health= maxHealth;
         speedBox = speed;
         chaseSpeedBox = chaseSpeed;
 
@@ -106,17 +108,18 @@ public class Entity : MonoBehaviour
     public void ChangeDirection()
     {
         // Generate a new random direction
-        float angle = Random.Range(0, 360);
+        float angle = Random.Range(-60, 360);
         targetDirection = Quaternion.Euler(0, angle, 0) * Vector3.forward;
     }
     public IEnumerator Stop()
     {
         if (moving)
         {
+            reScanTrigger();
             moving = false;
             speed = 0;
             chaseSpeed = 0;
-            yield return new WaitForSeconds(Random.Range(0.5f, 2.5f));
+            yield return new WaitForSeconds(Random.Range(0.2f, 1f));
             StartWalking();
         }
     }
@@ -126,6 +129,7 @@ public class Entity : MonoBehaviour
         speed = speedBox;
         chaseSpeed = chaseSpeedBox;
         moving = true;
+        reScanTrigger();
     }
 
     public void Chase(Transform target)
@@ -172,6 +176,7 @@ public class Entity : MonoBehaviour
         else if (prey)
         {
             StartCoroutine(Stop());
+            reScanTrigger();
         }
 
     }
@@ -211,10 +216,17 @@ public class Entity : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
+        //Make the entity slower the more damaged it gets
+        if (prey && chaseSpeed > 3)
+        {
+            chaseSpeed = chaseSpeed - (chaseSpeed * 0.4f);
+        }
         if (health <= 0)
         {
             dead = true;
         }
+
+        reScanTrigger();
     }
 
     public IEnumerator Death()
@@ -232,7 +244,14 @@ public class Entity : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 
-
+    public void reScanTrigger()
+    {
+        if (!prey)
+        {
+            GetComponent<SphereCollider>().enabled = false;
+            GetComponent<SphereCollider>().enabled = true;
+        }
+    }
 
 }
 

@@ -30,7 +30,7 @@ public class Predator : Entity
         if (other.gameObject != gameObject && chaseTarget == null)
         {
 
-
+            /*
             if (other.CompareTag("Prey"))
             {
                 if (!collidersPrey.Contains(other)) { collidersPrey.Add(other); }
@@ -44,9 +44,7 @@ public class Predator : Entity
 
             }
 
-
-
-
+            */
 
             if (other.CompareTag("Prey") || other.CompareTag("Player") || other.CompareTag("InfectedChick"))
             {
