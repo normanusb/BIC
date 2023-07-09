@@ -181,7 +181,7 @@
                     "name": "",
                     "id": "b038eeb2-9081-416a-97e4-575bc629a094",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "",
                     "action": "ThrowInfectedChick",
