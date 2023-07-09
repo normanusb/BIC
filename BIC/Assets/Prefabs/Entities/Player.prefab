@@ -477,6 +477,8 @@ MonoBehaviour:
   closestEntity: {fileID: 0}
   throwableChicksRadius: 7
   followingEntities: []
+  putPlayerHere: {fileID: 4397449481407575747}
+  footstepSpeed: 0.3
 --- !u!114 &6531249650563094947
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,10 +25,26 @@ public class Player : MonoBehaviour
     public float throwableChicksRadius = 10f;
     public List<Transform> followingEntities = new List<Transform>();
 
+    [SerializeField] private GameObject putPlayerHere;
+
+    float timer = 0.0f;
+
+    [SerializeField]
+    float footstepSpeed = 0.3f;
+
     public void OnMove(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
         //PLAY STEPS SOUNDS WITH FMOD
+
+        if (timer > footstepSpeed)
+            {
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PLAYER/Player_Foosteps", putPlayerHere);
+                timer = 0.0f;
+            }
+
+        timer += Time.deltaTime;
+
     }
 
     //Throwing Normal Chick
@@ -40,6 +56,7 @@ public class Player : MonoBehaviour
             if (closestEntity != null)
             {
                 Throw();
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PLAYER/Player_ThrowChick", putPlayerHere);
             }
         }
 
@@ -55,6 +72,7 @@ public class Player : MonoBehaviour
             if (closestEntity != null)
             {
                 InfectChickInHand();
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PLAYER/Player_ThrowChick_Infected", putPlayerHere);
             }
         }
 
@@ -121,6 +139,7 @@ public class Player : MonoBehaviour
 
         //Reload Scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PLAYER/Player_Respawn", putPlayerHere);
     }
 
     public void Throw()
