@@ -5,7 +5,7 @@
 			<value>Player_Foosteps</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{fe4ddbf0-0494-47bf-a1cd-83d22d7bdec6}</destination>
@@ -129,7 +129,6 @@
 	<object class="MixerBusEffectChain" id="{91196f91-8b1b-4a1a-97fb-3ff58da13c9f}">
 		<relationship name="effects">
 			<destination>{44f500fb-6e56-4c7b-a779-ff22795db38f}</destination>
-			<destination>{d3d77a67-e5d8-4435-8e61-1608edb72230}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6a160f74-7f56-4498-b6ce-561b48ad0ac0}" />
@@ -169,6 +168,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{81796b5c-46fe-4125-9325-d2682605942d}" />
 	<object class="MixerBusFader" id="{44f500fb-6e56-4c7b-a779-ff22795db38f}" />
-	<object class="SpatialiserEffect" id="{d3d77a67-e5d8-4435-8e61-1608edb72230}" />
 	<object class="MixerBusFader" id="{2a5897f1-3837-4a93-8d79-dd61d78c17e9}" />
 </objects>
