@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8c0d58e5-33eb-4f8f-a15e-210bfd189c36}">
+		<property name="assetPath">
+			<value>SFX_NPC_InfectedChick_Death.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.69374999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0fdf8ecc-02b8-4440-b41c-e74bc70a0e3a}</destination>
+		</relationship>
+	</object>
+</objects>

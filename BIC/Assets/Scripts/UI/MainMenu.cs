@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         //Opens the first scene of the game
-        SceneManager.LoadScene("AudioTest");
+        SceneManager.LoadScene("StorySlidesOpening");
 
         //FMOD - Play one-shot
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/MUSIC/MUS_Farm_Test", mainThemeObject);
