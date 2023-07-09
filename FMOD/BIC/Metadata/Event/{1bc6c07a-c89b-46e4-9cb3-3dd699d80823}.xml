@@ -5,7 +5,7 @@
 			<value>NPC_Chick_Death</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ebcfa45f-e91d-4400-baeb-32c66cb55e5f}</destination>
@@ -99,7 +99,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{4f662d8c-aaaa-4679-af3a-64a35b4437e4}">
 		<property name="volume">
-			<value>-7.5</value>
+			<value>-2</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -117,7 +117,6 @@
 	<object class="MixerBusEffectChain" id="{cf8acbab-d952-48c9-8aaf-a6d85874684b}">
 		<relationship name="effects">
 			<destination>{fd46c837-735a-4c0c-bd18-c95e266cd8e5}</destination>
-			<destination>{938175c2-6303-472f-827e-74d6e91c0354}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ce2e4a78-8d4a-4723-9909-cd861fb950fc}" />
@@ -129,6 +128,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{d991eba1-b879-4237-ba63-917ffb5e7fd9}" />
 	<object class="MixerBusFader" id="{fd46c837-735a-4c0c-bd18-c95e266cd8e5}" />
-	<object class="SpatialiserEffect" id="{938175c2-6303-472f-827e-74d6e91c0354}" />
 	<object class="MixerBusFader" id="{fbee162b-aefd-4fee-939b-2ca0bdcc7bcf}" />
 </objects>
